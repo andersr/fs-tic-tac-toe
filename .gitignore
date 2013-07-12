@@ -1,2 +1,5 @@
 # Ignore mockup files, such as Balsamiq wireframes
 /mockups
+
+# ignore files added just for review and research
+/research

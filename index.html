@@ -4,22 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Let's Play Tic Tac Toe!</title>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
-      <link rel="shortcut icon" href="/favicon.png" type="image/png">
-<link rel="shortcut icon" type="image/png" href="http://andersco.net/favicon.png" /> -->
 <link rel="stylesheet" href="css/screen.css">
    </head>
    <body>
       <header><h1>Let's Play Tic Tac Toe!</h1></header>
    	<section class="instructions"><p>Want to play a game of Tic Tac Toe? The rules are simple: each player alternates placing X's and O's on a grid.  The first player to get a full straight or diagonal row wins.  If the grid fills up with neither player having a full row, the game results in a tie.</p></section>
-
-<!--       should this be a form, or just elements in the page?
- -->
- <form action="">
+   <form>
    <input id="player-x-name" name="player-x-name" type="text" placeholder="Player 'X' Name (optional)">
       <input id="player-x-name" name="player-x-name" type="text" placeholder="Player 'X' Name (optional)">
-      <input type="submit" value="Start Game">
-</form>
+      <button id="start-game">Start Game</button>
+      </form>
 <footer>Built by <a href="http://twitter.com/andersramsay">@andersramsay</a>, available on <a href="https://github.com/andersr/fs-tic-tac-toe">Github</a></footer>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
    </body>
    </html>

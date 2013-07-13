@@ -20,6 +20,73 @@ $( "#start-game" ).on( "click", function( event ) {
 // 	}
 // });
 
+//for each array, get the next item in the array
+
+		
+
+	
+
+
+
+
+for(var j = win_across_3x3[i[j]]; j == win_across_3x3[i.length]; j = j ++){
+		
+		if (game_board[i].state = 'O';)
+
+		}
+
+//loop through each of the arrays in this pattern
+	
+
+		//set j to equal each of the arrays in the pattern
+		var j = ;
+
+		//game_board[j].state = 'O';
+
+
+		if (game_board[j].state = 'O';)
+
+		
+		
+		if (game_board[i].state = 'O';)
+
+	}
+
+
+
+for(var i = win_across_3x3[i[i]]; i == (board_size -1); i++){
+		if (game_board[i].state = 'O';)
+
+	}
+
+	for(var i = win_across_3x3[j[]]; i == (board_size -1); i++){
+		if (game_board[i].state = 'O';)
+
+	}
+
+
+	//Pattern across:  game_board[]
+
+	//do game_board[0], game_board[1], and game_board[2] all have the same state?
+	if(game_board[0].state == 'O' && game_board[1].state == 'O' && game_board[2].state == 'O'){
+		//O is the winner
+	}
+
+	if(game_board[0].state == 'X' && game_board[1].state == 'X' && game_board[2].state == 'X'){
+		//X is the winner
+	}
+
+//var win_down_3x3 = [1,4,7], [2,5,8], [3,6,9];
+//var win_diagonal_3x3 = [1,5,9], [3,5,7];
+
+
+// check if the square_id's corresponding to these patterns have all X' or all O's
+//game_board[0].square_id;
+// square id is same as game_board[?]
+	//a winning pattern
+// just need to insert the values from the winning patter into this and check each of them
+//read in each winning array
+
 function startGame() {
 // $("#intro").hide();
 

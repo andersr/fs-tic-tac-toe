@@ -5,38 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Let's Play Tic Tac Toe!</title>
   <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-<!--   <link rel="stylesheet" href="css/screen.css"> -->
+  <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-  <header><h1>Let's Play Tic Tac Toe!</h1></header>
-  <section id="instructions"><p id="intro" class="">Want to play a game of Tic Tac Toe? The rules are simple: each player alternates placing X's and O's on a grid.  The first player to get a full straight or diagonal row wins.  If the grid fills up with neither player having a full row, the game results in a tie.</p>
-    <p id="next-turn"><h2>Bob (X), your turn&hellip;</h2></p></section>
-     <input id="player-x-name" name="player-x-name" type="text" placeholder="Player 'X' Name (optional)">
-     <input id="player-x-name" name="player-x-name" type="text" placeholder="Player 'X' Name (optional)">
-     <button id="start-game">Start Game</button>
-
-     <section id="game">
-   <table class="game-board" border="0" cellspacing="0" cellpadding="1">
-  <tr>
-    <td><button id="1-1" class="top-left empty-square">&nbsp;</button></td>
-    <td><button id="1-2" class="top-middle empty-square">&nbsp;</button></td>
-    <td><button id="1-3" class="top-right empty-square">&nbsp;</button></td>
-  </tr>
-  <tr>
-    <td><button id="2-1" class="middle-left empty-square">&nbsp;</button></td>
-    <td><button id="2-2" class="middle-middle empty-square">&nbsp;</button></td>
-    <td><button id="2-3" class="middle-right empty-square">&nbsp;</button></td>
-  </tr>
-  <tr>
-    <td><button id="3-1" class="bottom-left empty-square">&nbsp;</button></td>
-    <td><button id="3-2" class="bottom-middle empty-square">&nbsp;</button></td>
-    <td><button id="3-3" class="bottom-right empty-square">&nbsp;</button></td>
-  </tr>
-</table>
-</section>
-   <footer>Built by <a href="http://twitter.com/andersramsay">@andersramsay</a>, available on <a href="https://github.com/andersr/fs-tic-tac-toe">Github</a></footer>
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-   <script src="js/main.js"></script>
- </body>
- </html>
+  <header>
+    <h1>Want to play Tic Tac Toe?</h1>
+  </header>
+  <section id="game-setup">
+    <p>The rules are simple: each player alternates placing X's and O's on a grid.  The first player to get a full straight or diagonal row wins.  If the grid fills up with neither player having a full row, the game results in a tie.</p>
+    <p><label for="player-x-name">Player 'X' name:</label><br><input id="player-x-name" name="player-x-name" type="text" size="30" placeholder="If blank, you'll be player 'X'"></p>
+    <p><label for="player-o-name">Player 'O' name:</label><br><input id="player-o-name" name="player-o-name" type="text" size="30" placeholder="If blank, you'll be player 'O'"></p>
+    <button id="start-game">Start Game</button>
+  </section>
+  <section id="play-game" class="hide">
+    <p id="notices" class="hide">&nbsp;</p>
+    <!-- Bob (X), your turn&hellip; -->
+    <table id="game-board" border="0" cellspacing="0" cellpadding="1">
+      <tr>
+        <td><button id="0" class="top-left empty-square">&nbsp;</button></td>
+        <td><button id="1" class="top-middle empty-square">&nbsp;</button></td>
+        <td><button id="2" class="top-right empty-square">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="3" class="middle-left empty-square">&nbsp;</button></td>
+        <td><button id="4" class="middle-middle empty-square">&nbsp;</button></td>
+        <td><button id="5" class="middle-right empty-square">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="6" class="bottom-left empty-square">&nbsp;</button></td>
+        <td><button id="7" class="bottom-middle empty-square">&nbsp;</button></td>
+        <td><button id="8" class="bottom-right empty-square">&nbsp;</button></td>
+      </tr>
+    </table>
+  </section>
+  <footer>Built by <a href="http://twitter.com/andersramsay">@andersramsay</a>, available on <a href="https://github.com/andersr/fs-tic-tac-toe">Github</a></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

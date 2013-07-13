@@ -1,4 +1,102 @@
+$( "#start-game" ).on( "click", function( event ) {
+	//$("#intro").addClass("hide");
+   // startGame();
+});
+
+//will these values persist across pages?
+// $("#player-x-name").focusout(function() {
+// 	if($(this).val() == ''){
+// 		var player_x_name = "X"
+// 	} else {
+// 		var player_x_name = $(this).val() + " (X)";
+// 	}
+// });
+
+// $("#player-o-name").focusout(function() {
+// 	if($(this).val() == ''){
+// 		var player_o_name = "O"
+// 	} else {
+// 		var player_x_name = $(this).val() + " (O)";
+// 	}
+// });
+
 function startGame() {
+// $("#intro").hide();
+
+
+	//var grid_size = 3; // hardcoded for a 3x3 board for now
+	//alert("test");
+	//hide intro-instructions
+
+	//var next_turn = x;
+	//playGame(next_turn);
+};
+
+// function playGame(next_turn) {
+// 	if(next_turn = x) {
+// 		next_turn = o;
+// 	} else {
+// 		next_turn = x;
+// 	}
+
+// 	playGame(next_turn);
+
+// };
+
+// function finishGame() {
+
+// };
+
+// can just display a hard-coded 3x3 table, 4x4 table etc
+
+	// the grid will always be a root value, or will always be a square, same across and same down
+	//loop through three rows
+	// within each row, add three cells
+
+//create a table based on the grid size
+// assign ids to the squares
+
+
+
+
+function createGameBoard(grid_size) {
+	var game_board = new Array(grid_col);
+
+  for (var grid_row = 0; grid_row <= game_board.length; grid_row++) {
+    game_board[i] = new Array(grid_size);
+  }
+
+  return game_board;
+}
+
+
+function startGame() {
+
+		//options:
+	/*
+	just navigate to the page with a href
+	redisplay everything on the same page
+
+	*/
+
+
+	
+
+
+
+	// At this point want to display the game board.
+	//  Should it be on a new page or 
+
+	// var game_instructions = "Be the first player to get all X’s or O’s across the board. Player X goes first. Good luck!"
+
+	
+	// createGameBoard(gridSize);
+
+	// displayGameBoard(gameBoard);
+
+	
+	
+	// total_turns = grid_size;
 
 	// if($("#player-x-name").val() == " "){
 	// 	var player-x = "X"

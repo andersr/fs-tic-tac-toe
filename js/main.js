@@ -9,6 +9,41 @@ var player_o = o_mark;
 var current_player;
 var current_mark;
 
+//winning patterns for 3x3 board
+var winning_patterns = [['1','2','3'], ['4','5','6'],['7','8','9']];
+
+function checkForWinner() {
+
+	for(var i = 0; i < winning_patterns.length; i++){
+
+		var winner = winning_patterns[i];
+
+		//alert(winner[0]);
+
+		if(game_board[winner[0] - 1].state == 'O'
+			 && game_board[winner[1] - 1].state == 'O'
+			 && game_board[winner[2] - 1].state == 'O') {
+
+			alert("O has won!");
+
+		} 
+		else if(game_board[winner[0]].state == 'X' 
+			&& game_board[winner[1]].state == 'X'
+			&& game_board[winner[2]].state == 'X') {
+
+			alert("X has won!");
+
+		}
+		else {
+
+			//alert("no winner yet");
+
+			switchPlayer();
+
+		}
+	}
+}
+
 //game squares class
 function gameSquare(state) {
   this.state = state;
@@ -47,13 +82,13 @@ function startGame() {
 	current_player = player_x; 	// X always has the first turn in tic tac toe
 	current_mark = x_mark;
 	$("#alerts").show()
+	$("#alerts span").replaceWith('<span>' + current_player + ' your turn...</span>');
 	playGame();
 
 };
 
 function playGame() {
 
-	$("#alerts span").replaceWith('<span>' + current_player + ' your turn...</span>');
 	
 	$( "#game-board button" ).click(function (event) {
 
@@ -63,10 +98,21 @@ function playGame() {
 
 		$(this).replaceWith('<span class="xo">' + current_mark + '</span>');
 
-		//checkForWinOrTie(clicked_on_square);
+	
+		checkForWinner();
 
-		switchPlayer();
+		// remaining_moves -= 1;
+
+		// if(remaining_moves <= (game_board.length - (board_size - 1))) {
+			
+		// } else {
+		// 	switchPlayer();
+		// };
+
+	//	checkForWinner();
+
 	});
+
 }
 
 function getPlayerNames(){
@@ -96,13 +142,15 @@ function switchPlayer(){
 		current_mark = x_mark;
 	};
 
+	$("#alerts span").replaceWith('<span>' + current_player + ' your turn...</span>');
+
 	return current_player, current_mark;
 	//playGame();
 	//return current_player, current_mark;
 };
 
-//check for a win or tie, else continue game
-function checkForWinOrTie(clicked_on_square) {
+// //check for a win or tie, else continue game
+// function checkForWinOrTie(clicked_on_square) {
 
 
-};
+// };

@@ -26,19 +26,19 @@ var current_mark;
 // 	game_board[i] = new gameSquare("empty");
 // }
 
-// function checkForWinOrTie() {
-// 	for(var i = win_across_3x3[i]; i == win_across_3x3.length; i++){
+function checkForWinOrTie() {
+	for(var i = win_across_3x3[i]; i == win_across_3x3.length; i++){
 
-// 		var winner = win_across_3x3[i];
+		var winner = win_across_3x3[i];
 
-// 		if(game_board[winner[0]].state = 'O' 
-// 		&& game_board[winner[1]].state = 'O'
-// 		&& game_board[winner[2]].state = 'O') {
+		if(game_board[winner[0]].state = 'O' 
+		&& game_board[winner[1]].state = 'O'
+		&& game_board[winner[2]].state = 'O') {
 
-// 			alert("You've won!");
-// 		}
-// 	}
-// };
+			alert("You've won!");
+		}
+	}
+};
 
 //global variables
 var board_size = (3 * 3) - 1; //hardcoded 3x3 board for now

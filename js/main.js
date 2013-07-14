@@ -31,42 +31,29 @@ function createEmptyGameBoard(board) {
     return board;
 }
 
- $(document).ready(function() {
+$(document).ready(function() {
 
  	game_setup_original = $("#game-setup").clone();
  	game_board_original = $("#game-board").clone();
 
- })
+})
 
-
-//on click of start-game
 $( "#start-game" ).click(function () {
 
 	winning_player == null;
 	createEmptyGameBoard(game_board_squares);
-	$("#game-board").replaceWith(game_board_original);
     startEndGame();
 });
 
 $( "#play-again" ).click(function () {
+	location.reload();
+});
 
-	//reset empty buttons with blank space
-	// for(var i = 0, l = game_board_squares.length; i < l; i++){
+$( "#quit-game" ).click(function () {
 
-	// 	$("#game-board button#" + i).replaceWith('<button id="' + i + '" class="empty-square">&nbsp;</button>');
-	// }
-
-	winning_player == null;
-	//createEmptyGameBoard(game_board_squares);
-
-	$("#alerts span").replaceWith("<span>Let's Play Tic Tac Toe!</span>");
-
-	$("#play-game").hide();
-	$("#game-setup").show();
-		
-		//$("#game-board").replaceWith(game_board_original);
-
-    //startEndGame();
+	if (confirm('Are you sure?')) { 
+ 		location.reload();
+	}
 });
 
 function startEndGame() {
@@ -151,25 +138,21 @@ function checkForWinner() {
 
 		//check to see if all three have either a 'O' or an 'X'
 		// since I am using a zero-based id for matching the pattern, will need to move down by 1
-
-		//if the state of the id corresponding to game_board_squares_squares 0, 1, 2 all are 'O'
 		if(game_board_squares[winner[0] - 1].state == 'O'
 			 && game_board_squares[winner[1] - 1].state == 'O'
 			 && game_board_squares[winner[2] - 1].state == 'O') {
 
-			//alert("O has won!");
 			winning_player = player_o;
 		} 
 		else if(game_board_squares[winner[0] - 1].state == 'X' 
 			&& game_board_squares[winner[1] - 1].state == 'X'
 			&& game_board_squares[winner[2] - 1].state == 'X') {
 
-			//alert("X has won!");
 			winning_player = player_x;
 		}
-		//return winning_player;
 	}
 }
+
 function getPlayerNames(){
 
 	if($("#player_x_name").val() !== ""){
@@ -185,8 +168,6 @@ function getPlayerNames(){
 	else {
 		player_o = "Player O";
 	}
-
-	//return player_x, player_o;
 }
 
 function switchPlayer(){
@@ -203,15 +184,4 @@ function switchPlayer(){
 	}
 
 	$("#alerts span").replaceWith("<span>" + current_player + ", your turn...</span>");
-	
-	//return current_player, current_mark;
 }
-
-//reset empty buttons with blank space
-	// for(var i = 0, l = game_board_squares.length; i < l; i++){
-	
-	// 	if(game_board_squares[i].state = "empty"){
-	// 		$("#game-board button#" + game_board_squares[i]).replaceWith("<span class='xo'> </span>");
-	// 	}
-	// }
-

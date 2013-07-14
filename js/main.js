@@ -27,31 +27,23 @@ function createEmptyGameBoard(board) {
 $( "#start-game" ).click(function () {
 
 	winning_player == null;
-
 	createEmptyGameBoard(game_board_squares);
-	
     startEndGame();
 });
 
 function startEndGame() {
 
 	if (winning_player == null){
-
 		getPlayerNames();
-
 		$("#game-setup").hide();
 		$("#play-game").show();
-
 		current_player = player_x; 	// X always has the first turn in tic tac toe
 		current_mark = x_mark;
-
-		$("#alerts").show()
 		$("#alerts span").replaceWith("<span>" + current_player + ", your turn...</span>");
-		
 		playGame();
-
 	}
 	else {
+
 		$("#alerts span").replaceWith("<span>" + winning_player + " is the winner!</span>");
 
 	}
@@ -67,22 +59,22 @@ function playGame() {
 
 		checkForWinner();
 
-		if (winning_player == player_o || winning_player == player_x){
+		if (winning_player){
 			startEndGame();
 		}
 		else if(remaining_moves == 0) {
 
-			$("#alerts span").replaceWith("<span>It's a tie!</span>");
+			winning_player == tie;
+			startEndGame();
 
 		}
 		else {
 			remaining_moves -= 1;
 			switchPlayer();
-		}
+		}		
 
 	});
 
-	
 }
 
 function checkForWinner() {
@@ -110,7 +102,7 @@ function checkForWinner() {
 			 && game_board_squares[winner[2] - 1].state == 'O') {
 
 			//alert("O has won!");
-			winning_player ==  player_o;
+			winning_player = player_o;
 			
 
 		} 
@@ -119,7 +111,7 @@ function checkForWinner() {
 			&& game_board_squares[winner[2] - 1].state == 'X') {
 
 			//alert("X has won!");
-			winning_player == player_x;
+			winning_player = player_x;
 		}
 		return winning_player;
 	}

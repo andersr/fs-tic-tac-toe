@@ -1,6 +1,6 @@
 //global variables
 var board_size = 3;
-var game_board_squares = new Array(board_size * board_size); //this creates
+var game_board_squares = new Array(board_size * board_size);
 var remaining_moves = game_board_squares.length - 1;
 var x_mark = 'X';
 var o_mark = 'O';

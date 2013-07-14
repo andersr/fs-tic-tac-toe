@@ -23,21 +23,6 @@ button#quit-game {
  border-color: #e8e7e9;
 }
 
-/*#game_setup, #play_game {
-  margin-bottom: 2em;
-}
-*/
-/*footer {
-  margin-top: 2em;
-  font-size: .6em;
-  color:#666;
-}*/
-
-/*footer a {
-  color:#666;
-}
-*/
-
 #game-board {
 //width:100%;
 }
@@ -53,16 +38,6 @@ text-align: center;
 font-family: 'Permanent Marker', Papyrus, fantasy;
 font-size: 3em;
 }
-/*
-#game-board .xo:hover:after {
-    content:"O";
-}*/
-
-/*#game-board .xo-hint {
-font-family: 'Permanent Marker', Papyrus, fantasy;
-font-size: 3em;
-color:#eeeeee;
-}*/
 
 #game-board .empty-square {
  width:100%;
@@ -71,10 +46,6 @@ color:#eeeeee;
  border-color: transparent;
 }
 
-/*#game-board .empty-square:hover {
- background-color: #eaebec;
-}
-*/
 .hide {
 display:none;
 }

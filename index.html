@@ -9,16 +9,16 @@
 </head>
 <body>
   <header>
-    <h1>Want to play Tic Tac Toe?</h1>
+    <h1 id="alerts"><span>Want to play Tic Tac Toe?</span></h1>
   </header>
   <section id="game-setup">
-    <p>The rules are simple: each player alternates placing X's and O's on a grid.  The first player to get a full straight or diagonal row wins.  If the grid fills up with neither player having a full row, the game results in a tie.</p>
-    <p><label for="player-x-name">Player 'X' name:</label><br><input id="player-x-name" name="player-x-name" type="text" size="30" placeholder="If blank, you'll be player 'X'"></p>
-    <p><label for="player-o-name">Player 'O' name:</label><br><input id="player-o-name" name="player-o-name" type="text" size="30" placeholder="If blank, you'll be player 'O'"></p>
-    <button id="start-game">Start Game</button>
+   <!--  <p>The rules are simple: each player alternates placing X's and O's on a grid.  The first player to get a full straight or diagonal row wins.  If the grid fills up with neither player having a full row, the game results in a tie.</p> -->
+    <p><label for="player_x_name">Player 'X' name:</label><br><input id="player_x_name" name="player_x_name" type="text" size="30" placeholder="If blank, you'll be 'Player X'"></p>
+    <p><label for="player_o_name">Player 'O' name:</label><br><input id="player_o_name" name="player_o_name" type="text" size="30" placeholder="If blank, you'll be 'Player O'"></p>
+    <button id="start-game">Play Game</button>
   </section>
   <section id="play-game" class="hide">
-    <p id="alerts" class="hide"><span>&nbsp;</span></p>
+   <!--  <p  class="hide"><span>&nbsp;</span></p> -->
     <!-- Bob (X), your turn&hellip; -->
     <table id="game-board" border="0" cellspacing="0" cellpadding="1">
       <tr>
@@ -38,7 +38,7 @@
       </tr>
     </table>
   </section>
-  <footer>Built by <a href="http://twitter.com/andersramsay">@andersramsay</a>, available on <a href="https://github.com/andersr/fs-tic-tac-toe">Github</a></footer>
+<!--   <footer>Play with at <a href="http://twitter.com/andersramsay">@andersramsay</a>, Source on <a href="https://github.com/andersr/fs-tic-tac-toe">Github</a></footer> -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
   <script src="js/main.js"></script>

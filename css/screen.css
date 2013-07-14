@@ -2,33 +2,63 @@
 /* ==========================================================================
    Tic Tac Toe Styles
    ========================================================================== */
+body {
+  padding: 1em;
+  font-size: 100%;
+  font-family: Verdana, Helvetical, Arial, sans-serif;
+}
 
-   #game-board {
-    width:100%;
-   }
-   #game-board td {
-    border:1px solid #ccc;
-    vertical-align: middle;
-    text-align: center;;
-   }
+input, label, button {
+  font-size: 1.3em;
+}
 
-    #game-board .xo {
-    font-family: 'Permanent Marker', Papyrus, fantasy;
-    font-size: 3em;
-   }
+button {
+  cursor:pointer;
+}
 
-   #game-board .empty-square {
-     width:100%;
-     height:100%;
-     background-color: transparent;
-     border-color: transparent;
-     cursor:pointer;
-   }
+/*#game_setup, #play_game {
+  margin-bottom: 2em;
+}
+*/
+/*footer {
+  margin-top: 2em;
+  font-size: .6em;
+  color:#666;
+}*/
 
-   .hide {
-    display:none;
-   }
+footer a {
+  color:#666;
+}
 
-   .show {
-    display:block;
-   }
+
+#game-board {
+//width:100%;
+}
+#game-board td {
+border:1px solid #ccc;
+height:5em;
+width:5em;
+vertical-align: middle;
+text-align: center;
+}
+
+#game-board .xo {
+font-family: 'Permanent Marker', Papyrus, fantasy;
+font-size: 3em;
+}
+
+#game-board .empty-square {
+ width:100%;
+ height:100%;
+ background-color: transparent;
+ border-color: transparent;
+ cursor:pointer;
+}
+
+.hide {
+display:none;
+}
+
+.show {
+display:block;
+}

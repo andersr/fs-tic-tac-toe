@@ -9,8 +9,6 @@ var player_o = o_mark;
 var current_player;
 var current_mark;
 var winning_player;
-var game_board_original;
-var game_setup_original;
 
 //game square constructor
 function gameSquare(state) {
@@ -46,7 +44,7 @@ $( "#play-again" ).click(function () {
 $( "#quit-game" ).click(function () {
 
 	if (confirm('Are you sure?')) { 
- 		location.reload();
+ 		window.location.reload();
 	}
 });
 
@@ -109,9 +107,7 @@ function playGame() {
 			remaining_moves -= 1;
 			switchPlayer();
 		}		
-
 	});
-
 }
 
 function checkForWinner() {

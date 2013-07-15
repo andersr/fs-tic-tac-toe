@@ -17,3 +17,9 @@
 
 
     //startEndGame();
+    $(document).ready(function() {
+
+ 	//game_setup_original = $("#game-setup").clone();
+ 	//game_board_original = $("#game-board").clone();
+
+})

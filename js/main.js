@@ -31,12 +31,6 @@ function createEmptyGameBoard(board) {
     return board;
 }
 
-$(document).ready(function() {
-
- 	game_setup_original = $("#game-setup").clone();
- 	game_board_original = $("#game-board").clone();
-
-})
 
 $( "#start-game" ).click(function () {
 
@@ -46,7 +40,7 @@ $( "#start-game" ).click(function () {
 });
 
 $( "#play-again" ).click(function () {
-	location.reload();
+	window.location.reload();
 });
 
 $( "#quit-game" ).click(function () {

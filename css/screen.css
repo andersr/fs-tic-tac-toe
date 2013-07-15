@@ -5,11 +5,16 @@
 body {
   padding: 1em;
   font-size: 100%;
-  font-family: Verdana, Helvetical, Arial, sans-serif;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 
 input, label, button {
   font-size: 1.3em;
+}
+
+input[type="text"] {
+  width:15em;
+
 }
 
 button {
@@ -53,3 +58,13 @@ display:none;
 .show {
 display:block;
 }
+
+@media only screen and (max-width : 480px) {
+
+  input {
+    width:80%;
+  }
+
+
+}
+
